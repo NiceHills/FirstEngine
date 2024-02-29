@@ -33,4 +33,3 @@ namespace FirstEngine {
 #define FE_WARN(...)		::FirstEngine::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define FE_ERROR(...)		::FirstEngine::Log::GetClientLogger()->error(__VA_ARGS__)
 #define FE_FATAL(...)		::FirstEngine::Log::GetClientLogger()->fatal(__VA_ARGS__)
-
