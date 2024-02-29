@@ -24,12 +24,18 @@
     <ClInclude Include="src\FirstEngine\EntryPoint.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\FirstEngine\Log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\FirstEngine\Application.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\FirstEngine.h">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FirstEngine\Log.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

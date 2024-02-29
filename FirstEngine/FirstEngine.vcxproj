@@ -11,11 +11,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\FirstEngine\Log.h" />
     <ClInclude Include="src\FirstEngine\Application.h" />
     <ClInclude Include="src\FirstEngine\Core.h" />
     <ClInclude Include="src\FirstEngine\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\FirstEngine\Log.cpp" />
     <ClCompile Include="src\FirstEngine.h" />
     <ClCompile Include="src\FirstEngine\Application.cpp" />
   </ItemGroup>
@@ -66,8 +68,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>FE_PLATFORM_WINDOWS;FE_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>
-      </AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)FirstEngine\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -78,7 +79,8 @@
       </Command>
     </CustomBuildStep>
     <PreBuildEvent>
-      <Command>copy /Y "$(SolutionDir)bin\Debug-x64\$(ProjectName)\$(ProjectName).dll" "$(SolutionDir)bin\Debug-x64\Sandbox\"</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -89,8 +91,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>FE_PLATFORM_WINDOWS;FE_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>
-      </AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)FirstEngine\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -103,7 +104,8 @@
       </Command>
     </CustomBuildStep>
     <PreBuildEvent>
-      <Command>copy /Y "$(SolutionDir)bin\Debug-x64\$(ProjectName)\$(ProjectName).dll" "$(SolutionDir)bin\Debug-x64\Sandbox\"</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
