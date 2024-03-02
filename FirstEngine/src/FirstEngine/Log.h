@@ -1,9 +1,8 @@
 #pragma once
 
-#include <memory>
-
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace FirstEngine {
 
@@ -27,7 +26,7 @@ namespace FirstEngine {
 #define FE_CORE_ERROR(...)	::FirstEngine::Log::GetCoreLogger()->error(__VA_ARGS__)
 #define FE_CORE_FATAL(...)	::FirstEngine::Log::GetCoreLogger()->fatal(__VA_ARGS__)
 
-// Core log macros
+// Client log macros
 #define FE_TRACE(...)		::FirstEngine::Log::GetClientLogger()->trace(__VA_ARGS__)
 #define FE_INFO(...)		::FirstEngine::Log::GetClientLogger()->info(__VA_ARGS__)
 #define FE_WARN(...)		::FirstEngine::Log::GetClientLogger()->warn(__VA_ARGS__)

@@ -1,3 +1,6 @@
 [submodule "FirstEngine/vendor/spdlog"]
 	path = FirstEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "FirstEngine/vendor/GLFW"]
+	path = FirstEngine/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW
