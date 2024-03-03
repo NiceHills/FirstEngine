@@ -13,14 +13,14 @@ namespace FirstEngine {
 		None = 0,
 		WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
 		AppTick, AppUpdate, AppRender,
-		KeyPressed, KeyReleased,
+		KeyPressed, KeyReleased, KeyTyped,
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
 	};
 
 	enum EventCategory
 	{
 		None = 0,
-		EventCategoryApplication		= BIT(0),
+		EventCategoryApplication	= BIT(0),
 		EventCategoryInput			= BIT(1),
 		EventCategoryKeyboard		= BIT(2),
 		EventCategoryMouse			= BIT(3),
@@ -41,7 +41,8 @@ namespace FirstEngine {
 		virtual const char* GetName() const = 0;
 		virtual int GetCategoryFlags() const = 0;
 		virtual std::string ToString() const { return GetName(); }
-		
+		virtual bool GetHandled() const{ return m_Handled; }
+
 		inline bool InInCategory(EventCategory category)
 		{
 			return GetCategoryFlags() & category;
