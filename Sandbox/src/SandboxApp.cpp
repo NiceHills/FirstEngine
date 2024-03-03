@@ -13,11 +13,17 @@ public:
 	void OnUpdate() override
 	{
 		//FE_INFO("ExampleLayer::Update");
+		if (FirstEngine::Input::IsKeyPressed(FE_KEY_TAB))
+			FE_TRACE("Tab Key is pressed!");
 	}
 
 	void OnEvent(FirstEngine::Event& event) override
 	{
-		FE_TRACE("{0}", event);
+		if (event.GetEventType() == FirstEngine::EventType::KeyPressed)
+		{
+			FirstEngine::KeyPressedEvent& e = (FirstEngine::KeyPressedEvent&)event;
+			FE_TRACE("{0}",(char)e.GetKeyCode());
+		}
 	}
 };
 

@@ -10,6 +10,11 @@
 	#error FirstEngine only support Windows!
 #endif
 
+#ifdef FE_DEBUG
+	#define FE_ENABLE_ASSERTS
+#endif
+
+
 #ifdef FE_ENABLE_ASSERTS
 	#define FE_ASSERT(x, ...) {if(!(x)){ FE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
 	#define FE_CORE_ASSERT(x, ...) {if(!(x)) {FE_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}

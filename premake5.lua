@@ -1,5 +1,6 @@
 workspace "FirstEngine"
 	architecture "x64"
+	startproject "Sandbox"
 
 	configurations
 	{
@@ -79,14 +80,17 @@ project "FirstEngine"
 
 	filter "configurations:Debug"
 		defines "FE_DEBUG"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "FE_RELEASE"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "FE_DIST"
+		runtime "Release"
 		optimize "On"
 
 
@@ -127,12 +131,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "FE_DEBUG"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "FE_RELEASE"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "FE_DIST"
+		runtime "Release"
 		optimize "On"

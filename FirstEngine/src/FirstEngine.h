@@ -4,6 +4,10 @@
 #include "FirstEngine/Layer.h"
 #include "FirstEngine/Log.h"
 
+#include "FirstEngine/MouseButtonCodes.h"
+#include "FirstEngine/KeyCodes.h"
+#include "FirstEngine/Input.h"
+
 #include "FirstEngine/ImGui/ImGuiLayer.h"
 
 //---------Entry Point----------

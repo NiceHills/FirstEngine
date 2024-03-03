@@ -174,7 +174,7 @@ namespace FirstEngine {
         dispatcher.Dispatch<KeyReleasedEvent>(BIND_EVENT_FN(ImGuiLayer::OnKeyReleasedEvent));
         dispatcher.Dispatch<KeyTypedEvent>(BIND_EVENT_FN(ImGuiLayer::OnKeyTypedEvent));
         dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FN(ImGuiLayer::OnWindowResizeEvent));
-        FE_CORE_TRACE("{0}", event);
+        //FE_CORE_TRACE("{0}", event);
     }
 
 
