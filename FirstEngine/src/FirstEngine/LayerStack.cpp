@@ -5,8 +5,8 @@ namespace FirstEngine {
 
 	LayerStack::LayerStack()
 	{
-		m_LayerInsert = begin();
 	}
+
 
 	LayerStack::~LayerStack()
 	{
@@ -17,8 +17,8 @@ namespace FirstEngine {
 
 	void LayerStack::PushLayer(Layer* layer)
 	{
-		m_LayerInsert = m_Layers.emplace(m_LayerInsert, layer);
-		m_LayerInsert++;
+		m_Layers.emplace(m_LayerInsertIndex + begin(), layer);
+		m_LayerInsertIndex++;
 	}
 
 
@@ -34,7 +34,7 @@ namespace FirstEngine {
 		if (it != end())
 		{
 			m_Layers.erase(it);
-			//m_LayerInsert--;
+			m_LayerInsertIndex--;
 		}
 	}
 

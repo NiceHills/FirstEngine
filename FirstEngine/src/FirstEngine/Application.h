@@ -4,6 +4,8 @@
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
 
+#include "ImGui/ImGuiLayer.h"
+
 #include "Window.h"
 
 namespace FirstEngine{
@@ -19,7 +21,7 @@ namespace FirstEngine{
 		void OnEvent(Event& e);
 
 		void PushLayer(Layer* layer);
-		void Pushoverlay(Layer* overlay);
+		void PushOverlay(Layer* overlay);
 
 		inline Window& GetWindow() { return *m_Window; }
 	
@@ -29,6 +31,8 @@ namespace FirstEngine{
 
 		static Application* Application::s_Instance;
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
+
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 	};

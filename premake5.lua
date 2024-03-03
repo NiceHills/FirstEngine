@@ -16,7 +16,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "FirstEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "FirstEngine/vendor/Glad/include"
 IncludeDir["ImGui"] = "FirstEngine/vendor/imgui"
-
+IncludeDir["glm"] = "FirstEngine/vendor/glm"
 
 
 include "FirstEngine/vendor/GLFW"
@@ -48,7 +48,8 @@ project "FirstEngine"
 		"%{prj.name}/src",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 
 	}
 
@@ -70,7 +71,6 @@ project "FirstEngine"
 			"FE_PLATFORM_WINDOWS",
 			"FE_BUILD_DLL",
 			"GLFW_INCLUDE_NONE",
-			"IMGUI_IMPL_OPENGL_LOADER_CUSTOM"
 		}
 
 		postbuildcommands
@@ -111,7 +111,10 @@ project "Sandbox"
 	includedirs
 	{
 		"FirstEngine/vendor/spdlog/include",
-		"FirstEngine/src"
+		"FirstEngine/src",
+		"FirstEngine/vendor",
+		"%{IncludeDir.glm}"
+
 	}
 
 	links

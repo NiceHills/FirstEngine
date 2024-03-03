@@ -1,5 +1,6 @@
 #include <FirstEngine.h>
-#include <iostream>
+
+#include "imgui/imgui.h"
 
 class ExampleLayer : public FirstEngine::Layer
 {
@@ -16,6 +17,15 @@ public:
 		if (FirstEngine::Input::IsKeyPressed(FE_KEY_TAB))
 			FE_TRACE("Tab Key is pressed!");
 	}
+
+
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World!");
+		ImGui::End();
+	}
+
 
 	void OnEvent(FirstEngine::Event& event) override
 	{
@@ -34,7 +44,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		Pushoverlay(new FirstEngine::ImGuiLayer());
 	}
 
 	~Sandbox()

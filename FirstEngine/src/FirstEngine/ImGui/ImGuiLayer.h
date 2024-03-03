@@ -15,11 +15,16 @@ namespace FirstEngine {
 		ImGuiLayer();
 		~ImGuiLayer();
 
-		void OnUpdate();
-		void OnDetach();
-		void OnAttach();
-		void OnEvent(Event& event);
+		virtual void OnDetach() override;
+		virtual void OnAttach() override;
+		virtual void OnImGuiRender() override;
+
+		void Begin();
+		void End();
 	private:
+
+	private:
+		/*
 		bool OnMouseButtonPressedEvent(MouseButtonPressedEvent& e);
 		bool OnMouseButtonReleasedEvent(MouseButtonReleasedEvent& e);
 		bool OnMouseMovedEvent(MouseMovedEvent& e);
@@ -27,8 +32,7 @@ namespace FirstEngine {
 		bool OnKeyPressedEvent(KeyPressedEvent& e);
 		bool OnKeyReleasedEvent(KeyReleasedEvent& e);
 		bool OnKeyTypedEvent(KeyTypedEvent& e);
-		bool OnWindowResizeEvent(WindowResizeEvent& e);
-	private:
+		bool OnWindowResizeEvent(WindowResizeEvent& e);*/
 		float m_Time = 0.0f;
 	};
 }
