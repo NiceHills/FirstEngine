@@ -1,2 +1,9 @@
 ﻿  Application.cpp
+  ImGuiLayer.cpp
+H:\dev\FirstEngine\FirstEngine\vendor\imgui\imgui.h(74,1): warning C4005: “IMGUI_VERSION”: 宏重定义
+H:\dev\FirstEngine\FirstEngine\vendor\imgui\imgui.h(25,1): message : 参见“IMGUI_VERSION”的前一个定义
+H:\dev\FirstEngine\FirstEngine\vendor\imgui\imgui.h(75,1): warning C4005: “IMGUI_VERSION_NUM”: 宏重定义
+H:\dev\FirstEngine\FirstEngine\vendor\imgui\imgui.h(26,1): message : 参见“IMGUI_VERSION_NUM”的前一个定义
+  WindowsInput.cpp
+  正在生成代码...
   FirstEngine.vcxproj -> H:\dev\FirstEngine\bin\Debug-windows-x86_64\FirstEngine\FirstEngine.lib
